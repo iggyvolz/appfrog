@@ -1,8 +1,9 @@
 <?php
 session_start();
-define('url','http://fightmon.hp.af.cm/upload.php');
-define('password', 'T5ESuguphetrumaq2druThACr8wrEqebahespazaSpEswUwEvaRECrUzUjeWReya');
-define('local', 'http://localhost/fightmon/local/upload.php');
+define('url','http://mysite.af.cm/upload.php'); // Path to your upload.php
+define('password', 'my_password'); // You password.  Put this as an environmental variable on your appfog site as "appfrog_password"
+define('local', 'http://localhost/mysite/local/upload.php'); // Path to your local site
+// Also, put an environmental variable of "appfrog_connect".  Make this true when starting the program.  Once you run upload.php, change this to false.
 define('executables', serialize(array('php', 'php5', 'htaccess')));
 if(!isset($_SESSION['appfrog_init']))
 {
